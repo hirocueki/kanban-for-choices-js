@@ -6,3 +6,5 @@ Choices.jsのサンプル
 - Rails 6.0.3.2
 - Choices.js
 - Haml
+- disabled
+  - turbolinks
