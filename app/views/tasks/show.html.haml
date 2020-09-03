@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @task.title
+%p
+  %b Content:
+  = @task.content
+
+%p
+  %b Members:
+  = @task.member_names
+
+= link_to 'Edit', edit_board_task_path(@board, @task)
+\|
+= link_to 'Back', board_path(@board)

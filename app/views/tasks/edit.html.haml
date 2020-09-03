@@ -1,0 +1,7 @@
+%h1 Editing task
+
+= render 'form'
+
+= link_to 'Show', board_task_path(@board, @task)
+\|
+= link_to 'Back', board_path(@board)

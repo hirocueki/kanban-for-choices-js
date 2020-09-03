@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @board.name
+
+= render 'tasks/task_list', board: @board, tasks: @board.tasks
+
+= link_to 'New Task', new_board_task_path(@board)
+
+= link_to 'Edit', edit_board_path(@board)
+\|
+= link_to 'Back', boards_path

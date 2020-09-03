@@ -1,0 +1,20 @@
+%table
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th Members
+      %th
+      %th
+      %th
+
+  %tbody
+    - tasks.each do |task|
+      %tr
+        %td= task.title
+        %td= task.content
+        %td= task.member_names
+        %td= link_to 'Show', board_task_path(board, task)
+        %td= link_to 'Edit', edit_board_task_path(board, task)
+        %td= link_to 'Destroy', board_task_path(board, task), :method => :delete, :data => { :confirm => 'Are you sure?' }
+

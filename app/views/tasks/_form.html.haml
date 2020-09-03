@@ -1,0 +1,18 @@
+= simple_form_for [@board, @task] do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .field
+    = f.input :title
+  .field
+    = f.input :content, as: :text
+
+  .field
+    = f.association :members,
+      required: true,
+      as: :select,
+      collection: Member.pluck(:name, :id),
+      input_html: { id:'choices-multiple-remove-button', multiple: true }
+
+  .actions
+    = f.button :submit

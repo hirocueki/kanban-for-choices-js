@@ -1,0 +1,8 @@
+= simple_form_for @board do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .field
+    = f.input :name
+  .actions
+    = f.button :submit
