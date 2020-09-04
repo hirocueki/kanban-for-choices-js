@@ -3,7 +3,7 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .field
-    = f.input :title
+    = f.input :title, id: 'task_title'
   .field
     = f.input :content, as: :text
 
