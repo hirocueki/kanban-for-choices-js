@@ -128,6 +128,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pagy (3.8.3)
     pg (1.2.3)
     public_suffix (4.0.5)
     puma (4.3.5)
@@ -254,6 +255,7 @@ DEPENDENCIES
   factory_bot_rails
   hamlit-rails
   listen (~> 3.2)
+  pagy (~> 3.5)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)

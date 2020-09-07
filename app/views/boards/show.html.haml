@@ -4,7 +4,9 @@
   %b Name:
   = @board.name
 
-= render 'tasks/task_list', board: @board, tasks: @board.tasks
+= render 'tasks/task_list', board: @board, tasks: @records
+
+= raw pagy_nav(@pagy)
 
 = link_to 'New Task', new_board_task_path(@board)
 

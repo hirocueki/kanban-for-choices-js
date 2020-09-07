@@ -5,7 +5,9 @@ class BoardsController < ApplicationController
     @boards = Board.default_order
   end
 
-  def show; end
+  def show
+    @pagy, @records = pagy(@board.tasks)
+  end
 
   def new
     @board = Board.new
